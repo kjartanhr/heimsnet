@@ -1,0 +1,94 @@
+/*
+
+    Heimsnet.css (c) 2020 Heimsnet
+    Last updated 12.3.2020 at 15:55
+    Created by eusoft - www.ynn.li
+
+*/
+
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* Global */
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html,body,.burrito {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: #FAFAFA;
+}
+
+/* Header */
+
+.head {
+    text-align: center;
+}
+
+.head .margin .logo {
+    margin: -15px;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.head .margin .nav {
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.head .margin .nav {
+    overflow: hidden;
+    background-color: #4c46f7;
+}
+
+.head .margin .nav a {
+    color: white;
+    background-color: #4c46f7;
+    padding: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin: 0;
+}
+
+.head .margin .nav a:hover {
+    background-color: #3b36c2;
+}
+
+.head .margin .nav a:active {
+    background-color: #3b36c2;
+}
+
+/* Hero */
+
+.hero {
+    height: 80%;
+    position: relative;
+}
+  
+.centre {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.e {
+    height: 1000px;
+}
