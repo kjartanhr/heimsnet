@@ -1,84 +1,92 @@
 /*
 
-    Heimsnet.css (c) 2020 Heimsnet
-    Last updated 12.3.2020 at 15:55
-    Created by eusoft - www.ynn.li
 
-*/
+    Heimsnet.css (c) - 2020 Heimsnet.
+    Created by european softworks ltd.
 
-/* Imports */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*
 
 /* Global */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab&display=swap');
+
+html,body {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.burrito {
+    height: 100%;
+}
 
 * {
     font-family: 'Open Sans', sans-serif;
 }
 
-html,body,.burrito {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    background-color: #FAFAFA;
+.button {
+    padding: 15px;
+    background-color: #4D62EA;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 7px;
+    display: inline-block;
+    cursor: pointer;
 }
 
-/* Header */
+.button:hover {
+    background-color: #4253c7;
+}
+
+/* Nav */
+
+.nav {
+    color: white;
+    background-color: #4D62EA;
+    overflow: hidden;
+    z-index: 100;
+}
 
 .head {
     text-align: center;
 }
 
-.head .margin .logo {
-    margin: -15px;
-}
-
 .sticky {
     position: fixed;
+    top: 0;
     width: 100%;
-    z-index: 100;
 }
 
-.head .margin .nav {
-    min-height: 0;
-    margin: 0;
-    padding: 0;
+.sticky + .content {
+    padding-top: 60px;
 }
 
-.head .margin .nav {
-    overflow: hidden;
-    background-color: #4c46f7;
-}
-
-.head .margin .nav a {
+.nav a {
     color: white;
-    background-color: #4c46f7;
-    padding: 12px;
-    padding-left: 15px;
-    padding-right: 15px;
-    display: inline-block;
-    font-size: 1.3rem;
     text-decoration: none;
-    margin: 0;
+    padding: 14px;
+    display: inline-block;
+    font-size: 1.2rem;
 }
 
-.head .margin .nav a:hover {
-    background-color: #3b36c2;
-}
-
-.head .margin .nav a:active {
-    background-color: #3b36c2;
+.nav a:hover {
+    background-color: #4253c7;
 }
 
 /* Hero */
 
 .hero {
     height: 80%;
+    background-image: url('../img/trevor-cole-salaAJW7Xdg-unsplash.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
-  
+
 .centre {
     margin: 0;
     position: absolute;
@@ -87,8 +95,104 @@ html,body,.burrito {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    color: white;
 }
 
-.e {
-    height: 1000px;
+.centre h1 {
+    font-size: 3rem;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 1);
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Main */
+
+.main {
+    text-align: center;
+}
+
+/* Prices */
+
+.prices {
+    width: 100%;
+    overflow: hidden;
+}
+
+.prices::after {
+    clear: both;
+}
+
+.prices .price {
+    width: 33%;
+    float: left;
+}
+
+.prices .price .container {
+    padding: 10px;
+    border: 1px solid black;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+
+.prices .price .container h1 {
+    margin-top: 0;
+}
+
+.prices .logo {
+    font-size: 6rem;
+    padding-top: 15px;
+    color: #4D62EA;
+}
+
+.prices .smol {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .prices .price {
+        width: 100%;
+        float: none;
+    }
+    .prices .price .container {
+        padding: 10px;
+        border: 1px solid black;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+}
+
+/* Discord join */
+
+.discord {
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.discord .fab {
+    margin: 0;
+    font-size: 5rem;
+}
+
+.discord h1 {
+    margin: 0;
+}
+
+.discord p {
+    font-size: 1.2rem;
+}
+
+.discord .button {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .discord {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 }
